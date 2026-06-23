@@ -19,6 +19,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 
 local l = Lang.GetResource("module-deliverpackage")
 local lc = Lang.GetResource 'core'
+local lm = Lang.GetResource("module-common")
 
 -- don't produce missions for further than this many light years away
 local max_delivery_dist = 30
@@ -202,11 +203,11 @@ local onChat = function (form, ref, option)
 		return
 	end
 
-	form:AddOption(l.WHY_SO_MUCH_MONEY, 1)
-	form:AddOption(l.HOW_SOON_MUST_IT_BE_DELIVERED, 2)
-	form:AddOption(l.WILL_I_BE_IN_ANY_DANGER, 4)
-	form:AddOption(l.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 3)
+	form:AddOption(lm.WHY_SO_MUCH_MONEY, 1)
+	form:AddOption(lm.HOW_SOON_MUST_IT_BE_DELIVERED, 2)
+	form:AddOption(lm.WILL_I_BE_IN_ANY_DANGER, 4)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 3)
 end
 
 local onDelete = function (ref)
@@ -470,11 +471,11 @@ local buildMissionDescription = function(mission)
 		dist		= dist})
 
 	desc.details = {
-		{ l.SPACEPORT, mission.location:GetSystemBody().name },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.location) },
-		{ l.DEADLINE, ui.Format.Date(mission.due) },
-		{ l.DANGER, getRiskMsg(mission.risk) },
-		{ l.DISTANCE, dist.." "..lc.UNIT_LY }
+		{ lm.SPACEPORT, mission.location:GetSystemBody().name },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.location) },
+		{ lm.DEADLINE, ui.Format.Date(mission.due) },
+		{ lm.DANGER, getRiskMsg(mission.risk) },
+		{ lm.DISTANCE, dist.." "..lc.UNIT_LY }
 	}
 
 	desc.location = mission.location

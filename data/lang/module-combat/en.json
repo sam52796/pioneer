@@ -111,10 +111,6 @@
     "description": "Name of a corporation",
     "message": "{name} LLC"
   },
-  "DANGER": {
-    "description": "The risk level",
-    "message": "Danger:"
-  },
   "DENY_1": {
     "description": "",
     "message": "Sorry, I need a pilot who has more combat experience."
@@ -126,10 +122,6 @@
   "DETECTIVE": {
     "description": "Police Detective",
     "message": "Detective"
-  },
-  "DISTANCE": {
-    "description": "Distance in space, between two locations",
-    "message": "Distance:"
   },
   "DO_I_NEED_SPECIAL_EQUIPMENT": {
     "description": "",
@@ -190,10 +182,6 @@
   "HARVESTING_LAND_THERE": {
     "description": "",
     "message": "We have a salesperson in every nearby star system. Land at a station before the deadline and our staff will contact you about the payment."
-  },
-  "HOW_WILL_I_BE_PAID": {
-    "description": "",
-    "message": "How will I be paid?"
   },
   "IS_THERE_A_TIME_LIMIT": {
     "description": "",
@@ -299,18 +287,6 @@
     "description": "{area} is an asteroid or planet",
     "message": "Clear the area around {area}. Break any resistance."
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "OK, agreed."
-  },
-  "PAYMENT_LOCATION": {
-    "description": "",
-    "message": "Payment location:"
-  },
-  "PLEASE_REPEAT_THE_MISSION_DETAILS": {
-    "description": "",
-    "message": "Please repeat the mission details!"
-  },
   "POLICE_1": {
     "description": "{area} is an asteroid or planet",
     "message": "Police detectives have discovered that a group of pirates try to establish a stronghold on {area} in the {system} system ({sectorx}, {sectory}, {sectorz}), {dist} ly. This must not happen. The local authorities pay {cash} for a mission to {area} as preparation of a police operation."
@@ -366,10 +342,6 @@
   "SUCCESSMSG_4": {
     "description": "",
     "message": "Very well done. I have paid the bill."
-  },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
   },
   "TARGET_AREA_REACHED": {
     "description": "",

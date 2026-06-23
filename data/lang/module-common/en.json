@@ -1,0 +1,70 @@
+{
+  "CLIENT": {
+    "description": "Mission detail: client name",
+    "message": "Client:"
+  },
+  "COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST": {
+    "description": "Comms dialog option",
+    "message": "Could you repeat the original request?"
+  },
+  "DANGER": {
+    "description": "Mission detail: the risk level",
+    "message": "Danger:"
+  },
+  "DEADLINE": {
+    "description": "Mission detail: must be completed by",
+    "message": "Deadline:"
+  },
+  "DISTANCE": {
+    "description": "Mission detail: distance to destination",
+    "message": "Distance:"
+  },
+  "EXCELLENT": {
+    "description": "Comms dialog response",
+    "message": "Excellent."
+  },
+  "HOW_MUCH_TIME": {
+    "description": "Comms dialog option",
+    "message": "How much time do I have?"
+  },
+  "HOW_SOON_MUST_IT_BE_DELIVERED": {
+    "description": "Comms dialog option",
+    "message": "How soon must it be delivered?"
+  },
+  "HOW_WILL_I_BE_PAID": {
+    "description": "Comms dialog option",
+    "message": "How will I be paid?"
+  },
+  "OK_AGREED": {
+    "description": "Comms dialog option: accept mission",
+    "message": "Ok, agreed."
+  },
+  "PAYMENT_LOCATION": {
+    "description": "Mission detail: where payment is collected",
+    "message": "Payment location:"
+  },
+  "SHIP": {
+    "description": "Mission detail: ship name",
+    "message": "Ship:"
+  },
+  "SPACEPORT": {
+    "description": "Mission detail: spaceport name",
+    "message": "Spaceport:"
+  },
+  "SYSTEM": {
+    "description": "Mission detail: star system",
+    "message": "System:"
+  },
+  "UNKNOWN": {
+    "description": "Mission detail: value not known",
+    "message": "Unknown"
+  },
+  "WHY_SO_MUCH_MONEY": {
+    "description": "Comms dialog option",
+    "message": "Why so much money?"
+  },
+  "WILL_I_BE_IN_ANY_DANGER": {
+    "description": "Comms dialog option",
+    "message": "Will I be in any danger?"
+  }
+}

@@ -47,18 +47,6 @@
     "description": "",
     "message": "HELP NEEDED"
   },
-  "CLIENT": {
-    "description": "",
-    "message": "Client:"
-  },
-  "DANGER": {
-    "description": "The risk level",
-    "message": "Danger:"
-  },
-  "DEADLINE": {
-    "description": "Must be delivered by",
-    "message": "Deadline:"
-  },
   "DENY_1": {
     "description": "",
     "message": "Excuse me, sir? I don't think your current qualification is sufficient."
@@ -82,10 +70,6 @@
   "FAILURE_MSG_RESCUE": {
     "description": "",
     "message": "Your unreliability has caused great harm. Get out of my sight!"
-  },
-  "HOW_MUCH_TIME": {
-    "description": "",
-    "message": "How much time do I have?"
   },
   "HOW_MUCH_TIME_ARMS_DEALER": {
     "description": "",
@@ -123,14 +107,6 @@
     "description": "A cargo item",
     "message": "Nuclear missile"
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "OK, agreed."
-  },
-  "REPEAT_THE_REQUEST": {
-    "description": "",
-    "message": "Could you please repeat the request?"
-  },
   "RESCUE_CAPSULE": {
     "description": "",
     "message": "Rescue capsule"
@@ -143,17 +119,9 @@
     "description": "Name of mission type",
     "message": "Scoop"
   },
-  "SHIP": {
-    "description": "",
-    "message": "Ship:"
-  },
   "SHIP_DESTROYED": {
     "description": "",
     "message": "Oh no. {shipid} has been destroyed. Deliver the cargo to {station} now!"
-  },
-  "SPACEPORT": {
-    "description": "",
-    "message": "Spaceport:"
   },
   "SPOILED_FOOD": {
     "description": "cargo item",
@@ -170,10 +138,6 @@
   "TOXIC_WASTE": {
     "description": "cargo item",
     "message": "Toxic waste"
-  },
-  "UNKNOWN": {
-    "description": "",
-    "message": "Unknown"
   },
   "WARNING": {
     "description": "",

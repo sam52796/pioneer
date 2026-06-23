@@ -21,6 +21,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 
 local l = Lang.GetResource("module-combat")
 local lc = Lang.GetResource 'core'
+local lm = Lang.GetResource("module-common")
 
 -- typical reward for a mission to a system 1ly away
 local typical_reward = 100
@@ -174,10 +175,10 @@ local onChat = function (form, ref, option)
 	form:AddOption(l.WHAT_ARE_THE_MISSION_OBJECTIVES, 1)
 	form:AddOption(l.WILL_I_BE_IN_TROUBLE, 2)
 	form:AddOption(l.IS_THERE_A_TIME_LIMIT, 3)
-	form:AddOption(l.HOW_WILL_I_BE_PAID, 4)
+	form:AddOption(lm.HOW_WILL_I_BE_PAID, 4)
 	form:AddOption(l.DO_I_NEED_SPECIAL_EQUIPMENT, 6)
-	form:AddOption(l.PLEASE_REPEAT_THE_MISSION_DETAILS, 0)
-	form:AddOption(l.OK_AGREED, 5)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 5)
 end
 
 local onDelete = function (ref)
@@ -547,12 +548,12 @@ local buildMissionDescription = function(mission)
 
 	desc.details = {
 		{ l.MISSION, missiontype },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.location) },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.location) },
 		{ l.AREA, mission.location:GetSystemBody().name },
-		{ l.DISTANCE, dist.." "..lc.UNIT_LY },
+		{ lm.DISTANCE, dist.." "..lc.UNIT_LY },
 		{ l.TIME_LIMIT, ui.Format.Date(mission.due) },
-		{ l.DANGER, l["RISK_" .. math.ceil(mission.risk * (getNumberOfFlavours("RISK")))] },
-		{ l.PAYMENT_LOCATION, paymentLoc }
+		{ lm.DANGER, l["RISK_" .. math.ceil(mission.risk * (getNumberOfFlavours("RISK")))] },
+		{ lm.PAYMENT_LOCATION, paymentLoc }
 	}
 
 	return desc

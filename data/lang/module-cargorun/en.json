@@ -143,18 +143,6 @@
     "description": "custom cargo",
     "message": "containerized living units"
   },
-  "COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST": {
-    "description": "",
-    "message": "Could you please repeat the original request?"
-  },
-  "DANGER": {
-    "description": "the risk level",
-    "message": "Danger:"
-  },
-  "DEADLINE": {
-    "description": "Must be delivered by",
-    "message": "Deadline:"
-  },
   "DELIVER_TO": {
     "description": "Deliver to this location",
     "message": "Deliver to:"
@@ -202,10 +190,6 @@
   "DIGESTERS": {
     "description": "custom cargo",
     "message": "digesters"
-  },
-  "DISTANCE": {
-    "description": "distance in space, between two locations",
-    "message": "Distance:"
   },
   "ELECTRICAL_APPLIANCES": {
     "description": "custom cargo",
@@ -314,10 +298,6 @@
   "HOW_MUCH_MASS": {
     "description": "",
     "message": "How much mass?"
-  },
-  "HOW_SOON_MUST_IT_BE_DELIVERED": {
-    "description": "",
-    "message": "How soon must it be delivered?"
   },
   "INTROTEXT_1": {
     "description": "",
@@ -439,10 +419,6 @@
     "description": "",
     "message": "Transport {amount} t for {reward}"
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "OK, agreed."
-  },
   "OK_WE_AGREE": {
     "description": "",
     "message": "OK, we agree on {amount} t for {reward}."
@@ -563,10 +539,6 @@
     "description": "custom cargo",
     "message": "semi-finished products"
   },
-  "SPACEPORT": {
-    "description": "",
-    "message": "Spaceport:"
-  },
   "SPACESHIP_PARTS": {
     "description": "custom cargo",
     "message": "spaceship parts"
@@ -594,10 +566,6 @@
   "SUCCESSMSG_FLUFFY_1": {
     "description": "Said when receiving a shipment of Quibbles (see wikipedia Tribble)",
     "message": "Oh dear, what to do with so many fluffy beings. Either way, money has been sent."
-  },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
   },
   "TARGET_DESTROYED": {
     "description": "",
@@ -730,14 +698,6 @@
   "WHYSOMUCH_WEDDING_1": {
     "description": "",
     "message": "So far I could not find anyone to perform this transport. When the season is over, my merchandise is worthless."
-  },
-  "WHY_SO_MUCH_MONEY": {
-    "description": "",
-    "message": "Why so much money?"
-  },
-  "WILL_I_BE_IN_ANY_DANGER": {
-    "description": "",
-    "message": "Will I be in any danger?"
   },
   "YOU_DO_NOT_HAVE_ENOUGH_CARGO_SPACE_ON_YOUR_SHIP": {
     "description": "",

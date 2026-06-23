@@ -26,6 +26,7 @@ local utils = require 'utils'
 
 local l = Lang.GetResource("module-scoop")
 local lc = Lang.GetResource("ui-core")
+local lm = Lang.GetResource("module-common")
 
 local AU = 149597870700.0
 local LEGAL = 1
@@ -464,9 +465,9 @@ local onChat = function (form, ref, option)
 	end
 
 	form:AddOption(l.WHY_NOT_YOURSELF, 1)
-	form:AddOption(l.HOW_MUCH_TIME, 2)
-	form:AddOption(l.REPEAT_THE_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 3)
+	form:AddOption(lm.HOW_MUCH_TIME, 2)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 3)
 end
 
 local getPlanets = function (system)
@@ -622,7 +623,7 @@ local onCargoDestroyed = function (body, attacker)
 				end
 				if not mission.location and mission.status ~= "FAILED" then
 					if mission.deliver_to_ship then
-						mission.destination = l.SHIP .. "\n" .. mission.ship_label
+						mission.destination = lm.SHIP .. "\n" .. mission.ship_label
 					else
 						mission.destination = "-\n-"
 					end
@@ -821,11 +822,11 @@ local buildMissionDescription = function(mission)
 	})
 
 	desc.details = {
-		{ l.CLIENT, mission.client.name },
-		{ l.SPACEPORT, mission.station:GetSystemBody().name },
-		mission.client_ship and { l.SHIP, mission.client_ship.label } or false,
+		{ lm.CLIENT, mission.client.name },
+		{ lm.SPACEPORT, mission.station:GetSystemBody().name },
+		mission.client_ship and { lm.SHIP, mission.client_ship.label } or false,
 		false,
-		{ l.DEADLINE, ui.Format.Date(mission.due) }
+		{ lm.DEADLINE, ui.Format.Date(mission.due) }
 	}
 
 	desc.client = mission.client

@@ -3,10 +3,6 @@
     "description": "",
     "message": "Assassination"
   },
-  "COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST": {
-    "description": "",
-    "message": "Could you repeat the original request?"
-  },
   "DENY_0": {
     "description": "",
     "message": "I'm sorry, but I don't trust you."
@@ -38,14 +34,6 @@
   "DENY_7": {
     "description": "",
     "message": "I'm not willing to risk this contract by giving it to someone as inexperienced as you."
-  },
-  "DISTANCE": {
-    "description": "",
-    "message": "Distance:"
-  },
-  "EXCELLENT": {
-    "description": "",
-    "message": "Excellent."
   },
   "FLAVOUR_0_ADTEXT": {
     "description": "",
@@ -195,10 +183,6 @@
     "description": "",
     "message": "How soon must it be done?"
   },
-  "HOW_WILL_I_BE_PAID": {
-    "description": "",
-    "message": "How will I be paid?"
-  },
   "IT_MUST_BE_DONE_AFTER": {
     "description": "",
     "message": "It must be done after {target} leaves {spaceport}. Do not miss this opportunity."
@@ -211,29 +195,13 @@
     "description": "",
     "message": "It must be done after he leaves {spaceport}. Do not miss this opportunity."
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "Ok, agreed."
-  },
   "RETURN_HERE_ON_THE_COMPLETION_OF_THE_CONTRACT_AND_YOU_WILL_BE_PAID": {
     "description": "",
     "message": "Return here on the completion of the contract and you will be paid."
   },
-  "SHIP": {
-    "description": "",
-    "message": "Ship:"
-  },
   "SHIP_ID": {
     "description": "",
     "message": "Ship ID:"
-  },
-  "SPACEPORT": {
-    "description": "",
-    "message": "Spaceport:"
-  },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
   },
   "TARGET_NAME": {
     "description": "",

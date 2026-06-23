@@ -47,10 +47,6 @@
     "description": "",
     "message": "SHIP FOR SEARCH REQUIRED"
   },
-  "CLIENT": {
-    "description": "",
-    "message": "Client:"
-  },
   "COMPANY": {
     "description": "",
     "message": "Company:"
@@ -79,21 +75,9 @@
     "description": "Name of a company",
     "message": "{name} Special IT Services Foundation"
   },
-  "DANGER": {
-    "description": "The risk level",
-    "message": "Danger:"
-  },
-  "DEADLINE": {
-    "description": "Must be delivered by",
-    "message": "Deadline:"
-  },
   "DENY_1": {
     "description": "",
     "message": "Excuse me Sir, but I need a pilot who has more experience."
-  },
-  "DISTANCE": {
-    "description": "Distance in space, between two locations",
-    "message": "Distance:"
   },
   "FAILUREMSG_1": {
     "description": "",
@@ -138,10 +122,6 @@
   "HOW_CAN_I_FIND_HIM": {
     "description": "",
     "message": "How can I find him?"
-  },
-  "HOW_MUCH_TIME": {
-    "description": "",
-    "message": "How much time do I have?"
   },
   "HOW_MUCH_TIME_DELIVER_DOCUMENT": {
     "description": "",
@@ -339,10 +319,6 @@
     "description": "",
     "message": "You want to meet {wanted}? Over your dead body!"
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "OK, agreed."
-  },
   "ON_BOARD": {
     "description": "Status indicator showing if a passenger is currently onboard the player's ship.",
     "message": "On board"
@@ -382,10 +358,6 @@
   "PIRATE_TAUNTS_3": {
     "description": "",
     "message": "You actually went all this way to deliver this silly message to me? You better get out of here!"
-  },
-  "REPEAT_THE_REQUEST": {
-    "description": "",
-    "message": "Could you please repeat the request?"
   },
   "RISK_EVACUATION_FEMALE_1": {
     "description": "",
@@ -443,14 +415,6 @@
     "description": "",
     "message": "Oh yes indeed. {wanted} is a maniac. You should be prepared for everything!"
   },
-  "SHIP": {
-    "description": "",
-    "message": "Ship:"
-  },
-  "SPACEPORT": {
-    "description": "",
-    "message": "Spaceport:"
-  },
   "STATUS": {
     "description": "Label indicating the status display of a requested passenger.",
     "message": "Status:"
@@ -499,10 +463,6 @@
     "description": "",
     "message": "You found {wanted}? Great! Here's your payment."
   },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
-  },
   "TIP_FEMALE_1": {
     "description": "",
     "message": "I'm not sure, but I think {wanted} is currently at {station}."
@@ -538,10 +498,6 @@
   "TRANSMITTING_MSG": {
     "description": "Message from the ship's computer",
     "message": "Transmitting message to ship {shipid}"
-  },
-  "UNKNOWN": {
-    "description": "",
-    "message": "Unknown"
   },
   "WANTED": {
     "description": "",

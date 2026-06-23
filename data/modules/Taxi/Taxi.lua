@@ -22,6 +22,7 @@ local PirateTemplate = MissionUtils.ShipTemplates.GenericPirate
 -- Get the language resource
 local l = Lang.GetResource("module-taxi")
 local lc = Lang.GetResource 'core'
+local lm = Lang.GetResource("module-common")
 
 -- don't produce missions for further than this many light years away
 local max_taxi_dist = 40
@@ -218,7 +219,7 @@ local onChat = function (form, ref, option)
 		table.insert(missions, mission)
 		MissionUtils.SetupOverdueTimer(mission)
 
-		form:SetMessage(l.EXCELLENT)
+		form:SetMessage(lm.EXCELLENT)
 
 		return
 	elseif option == 4 then
@@ -232,12 +233,12 @@ local onChat = function (form, ref, option)
 		form:SetMessage(flavours[ad.flavour].danger)
 	end
 
-	form:AddOption(l.WHY_SO_MUCH_MONEY, 1)
+	form:AddOption(lm.WHY_SO_MUCH_MONEY, 1)
 	form:AddOption(l.HOW_MANY_OF_YOU_ARE_THERE, 2)
 	form:AddOption(l.HOW_SOON_YOU_MUST_BE_THERE, 4)
-	form:AddOption(l.WILL_I_BE_IN_ANY_DANGER, 5)
-	form:AddOption(l.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 3)
+	form:AddOption(lm.WILL_I_BE_IN_ANY_DANGER, 5)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 3)
 end
 
 local onDelete = function (ref)
@@ -488,9 +489,9 @@ local buildMissionDescription = function(mission)
 		{ l.FROM, ui.Format.SystemPath(mission.start) },
 		{ l.TO, ui.Format.SystemPath(mission.location) },
 		{ l.GROUP_DETAILS, string.interp(flavours[mission.flavour].howmany, {group = #mission.group}) },
-		{ l.DEADLINE, ui.Format.Date(mission.due) },
-		{ l.DANGER, flavours[mission.flavour].danger },
-		{ l.DISTANCE, dist.." "..lc.UNIT_LY }
+		{ lm.DEADLINE, ui.Format.Date(mission.due) },
+		{ lm.DANGER, flavours[mission.flavour].danger },
+		{ lm.DISTANCE, dist.." "..lc.UNIT_LY }
 	}
 
 	return desc

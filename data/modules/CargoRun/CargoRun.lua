@@ -19,6 +19,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 
 local l = Lang.GetResource("module-cargorun")
 local lc = Lang.GetResource 'core'
+local lm = Lang.GetResource("module-common")
 
 local PirateTemplate = MissionUtils.ShipTemplates.WeakPirate
 local EscortTemplate = MissionUtils.ShipTemplates.GenericPolice
@@ -322,12 +323,12 @@ onChat = function (form, ref, option)
 		form:RemoveNavButton()
 		form:AddOption(l.GO_BACK, 0)
 	else
-		form:AddOption(l.WHY_SO_MUCH_MONEY, 1)
+		form:AddOption(lm.WHY_SO_MUCH_MONEY, 1)
 		form:AddOption(l.HOW_MUCH_MASS, 2)
-		form:AddOption(l.HOW_SOON_MUST_IT_BE_DELIVERED, 4)
-		form:AddOption(l.WILL_I_BE_IN_ANY_DANGER, 5)
-		form:AddOption(l.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
-		form:AddOption(l.OK_AGREED, 3)
+		form:AddOption(lm.HOW_SOON_MUST_IT_BE_DELIVERED, 4)
+		form:AddOption(lm.WILL_I_BE_IN_ANY_DANGER, 5)
+		form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+		form:AddOption(lm.OK_AGREED, 3)
 	end
 end
 
@@ -835,14 +836,14 @@ local buildMissionDescription = function(mission)
 	if not mission.pickup then
 		desc.details = {
 			l.DELIVER_TO,
-			{ l.SPACEPORT,	mission.location:GetSystemBody().name },
-			{ l.SYSTEM,		ui.Format.SystemPath(mission.location) },
-			{ l.DISTANCE,	dist.." "..lc.UNIT_LY },
+			{ lm.SPACEPORT,	mission.location:GetSystemBody().name },
+			{ lm.SYSTEM,		ui.Format.SystemPath(mission.location) },
+			{ lm.DISTANCE,	dist.." "..lc.UNIT_LY },
 			false,
-			{ l.DEADLINE,	ui.Format.Date(mission.due) },
+			{ lm.DEADLINE,	ui.Format.Date(mission.due) },
 			{ l.CARGO,		mission.cargotype:GetName():scase() },
 			{ l.AMOUNT,		mission.amount.."t " },
-			{ l.DANGER,		danger },
+			{ lm.DANGER,		danger },
 		}
 	else
 		local domicileDist = Game.system and string.format("%.2f", Game.system:DistanceTo(mission.domicile)) or "???"
@@ -850,18 +851,18 @@ local buildMissionDescription = function(mission)
 
 		desc.details = {
 			l.PICKUP_FROM,
-			{ l.SPACEPORT,	mission.location:GetSystemBody().name },
-			{ l.SYSTEM,		ui.Format.SystemPath(mission.location) },
-			{ l.DISTANCE,	dist.." "..lc.UNIT_LY },
+			{ lm.SPACEPORT,	mission.location:GetSystemBody().name },
+			{ lm.SYSTEM,		ui.Format.SystemPath(mission.location) },
+			{ lm.DISTANCE,	dist.." "..lc.UNIT_LY },
 			l.DELIVER_TO,
-			{ l.SPACEPORT,	mission.domicile:GetSystemBody().name },
-			{ l.SYSTEM,		ui.Format.SystemPath(mission.domicile) },
-			{ l.DISTANCE,	domicileDist.. " " .. lc.UNIT_LY },
+			{ lm.SPACEPORT,	mission.domicile:GetSystemBody().name },
+			{ lm.SYSTEM,		ui.Format.SystemPath(mission.domicile) },
+			{ lm.DISTANCE,	domicileDist.. " " .. lc.UNIT_LY },
 			false,
-			{ l.DEADLINE,	ui.Format.Date(mission.due) },
+			{ lm.DEADLINE,	ui.Format.Date(mission.due) },
 			{ l.CARGO,		(mission.cargotype:GetName():scase()) },
 			{ l.AMOUNT,		mission.amount.."t "..is_cargo_loaded },
-			{ l.DANGER,		danger },
+			{ lm.DANGER,		danger },
 		}
 
 		desc.returnLocation = mission.domicile

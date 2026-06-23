@@ -15,17 +15,9 @@
     "description": "",
     "message": "Commodities"
   },
-  "COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST": {
-    "description": "",
-    "message": "Could you repeat the original request?"
-  },
   "CREW": {
     "description": "",
     "message": "Crew"
-  },
-  "DEADLINE": {
-    "description": "",
-    "message": "Deadline:"
   },
   "DELIVERED_PASSENGER": {
     "description": "",
@@ -34,10 +26,6 @@
   "DELIVERY": {
     "description": "",
     "message": "DELIVERY"
-  },
-  "DISTANCE": {
-    "description": "",
-    "message": "Distance:"
   },
   "ENTITY_FAMILY_BUSINESS_1": {
     "description": "",
@@ -447,10 +435,6 @@
     "description": "",
     "message": "How far away is the target?"
   },
-  "HOW_MUCH_TIME": {
-    "description": "",
-    "message": "How much time do I have?"
-  },
   "INTERACTION_ABORTED": {
     "description": "",
     "message": "Interaction aborted. Please come closer and try again."
@@ -495,10 +479,6 @@
     "description": "",
     "message": "Cannot complete transfer. Passenger missing."
   },
-  "OK_AGREED": {
-    "description": "",
-    "message": "Ok, agreed."
-  },
   "ORBIT": {
     "description": "",
     "message": "Orbit"
@@ -510,10 +490,6 @@
   "PASSENGERS": {
     "description": "",
     "message": "Passengers"
-  },
-  "PAYMENT_LOCATION": {
-    "description": "",
-    "message": "Payment location:"
   },
   "PICKUP": {
     "description": "",
@@ -690,10 +666,6 @@
   "SHIP_UNRESPONSIVE": {
     "description": "",
     "message": "Target ship unresponsive."
-  },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
   },
   "TARGET_SHIP_ID": {
     "description": "",

@@ -23,6 +23,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 
 local l = Lang.GetResource 'module-findperson'
 local lc = Lang.GetResource 'core'
+local lm = Lang.GetResource("module-common")
 
 local PirateTemplate = MissionUtils.ShipTemplates.GenericPirate
 local MercenaryTemplate = MissionUtils.ShipTemplates.GenericMercenary
@@ -149,9 +150,9 @@ local onChat = function (form, ref, option)
 
 	form:AddOption(l["HOW_CAN_I_FIND_" .. (ad.wanted.female and "HER" or "HIM")], 1)
 	form:AddOption(l.IS_THERE_A_RISK, 2)
-	form:AddOption(l.HOW_MUCH_TIME, 3)
-	form:AddOption(l.REPEAT_THE_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 4)
+	form:AddOption(lm.HOW_MUCH_TIME, 3)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 4)
 end
 
 local onDelete = function (ref)
@@ -504,20 +505,20 @@ local buildMissionDescription = function (mission)
 
 	desc.details = {
 		{ l.WANTED, mission.wanted.name },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.location) },
-		{ l.SPACEPORT, mission.tipster and mission.location:GetSystemBody().name or l.UNKNOWN },
-		{ l.STATUS, Passengers.CheckEmbarked(Game.player, { mission.wanted, }) > 0 and l.ON_BOARD or l.UNKNOWN },
-		{ l.DISTANCE, dist .. " " .. lc.UNIT_LY },
-		mission.flavour.ship and { l.SHIP, mission.shipid },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.location) },
+		{ lm.SPACEPORT, mission.tipster and mission.location:GetSystemBody().name or lm.UNKNOWN },
+		{ l.STATUS, Passengers.CheckEmbarked(Game.player, { mission.wanted, }) > 0 and l.ON_BOARD or lm.UNKNOWN },
+		{ lm.DISTANCE, dist .. " " .. lc.UNIT_LY },
+		mission.flavour.ship and { lm.SHIP, mission.shipid },
 		false,
-		{ l.CLIENT, mission.client.name },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.domicile) },
-		{ l.SPACEPORT, mission.domicile:GetSystemBody().name },
-		{ l.DISTANCE, domicileDist .. " " .. lc.UNIT_LY },
+		{ lm.CLIENT, mission.client.name },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.domicile) },
+		{ lm.SPACEPORT, mission.domicile:GetSystemBody().name },
+		{ lm.DISTANCE, domicileDist .. " " .. lc.UNIT_LY },
 		mission.flavour.company and { l.COMPANY, mission.company },
 		false,
-		{ l.DEADLINE, ui.Format.Date(mission.due) },
-		{ l.DANGER, string.interp(danger, { wanted = mission.wanted.name }) },
+		{ lm.DEADLINE, ui.Format.Date(mission.due) },
+		{ lm.DANGER, string.interp(danger, { wanted = mission.wanted.name }) },
 	}
 
 	return desc

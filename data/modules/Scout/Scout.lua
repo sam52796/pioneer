@@ -23,6 +23,7 @@ local ScanManager = require '.ScanManager'
 local l = Lang.GetResource("module-scout")
 local lc = Lang.GetResource("core")
 local luc = Lang.GetResource("ui-core")
+local lm = Lang.GetResource("module-common")
 
  -- don't produce missions for further than this many light years away
 local max_scout_dist = 30
@@ -292,12 +293,12 @@ local onChat = function (form, ref, option)
 		return
 	end
 
-	form:AddOption(l.WHY_SO_MUCH_MONEY, 1)
+	form:AddOption(lm.WHY_SO_MUCH_MONEY, 1)
 	form:AddOption(l.WHEN_DO_YOU_NEED_THE_DATA, 2)
 	form:AddOption(l.WHAT_DATA_DO_YOU_NEED, 4)
 	form:AddOption(l.HOW_DOES_IT_WORK, 5)
-	form:AddOption(l.REPEAT_THE_ORIGINAL_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 3)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 3)
 end
 
 
@@ -779,8 +780,8 @@ local buildMissionDescription = function (mission)
 		"Mapping",
 		{lc.SYSTEM..":",  ui.Format.SystemPath(mission.location) },
 		{l.TARGET_BODY,   mission.location:GetSystemBody().name },
-		{l.DISTANCE,      dist .. lc.UNIT_LY},
-		{l.DEADLINE,      Format.Date(mission.due)},
+		{lm.DISTANCE,      dist .. lc.UNIT_LY},
+		{lm.DEADLINE,      Format.Date(mission.due)},
 		{luc.TYPE..":",   mission.orbital and l.ORBITAL_SCAN or l.SURFACE_SCAN},
 		{l.COVERAGE,      format_coverage(mission.coverage) },
 		{l.RESOLUTION,    format_resolution(mission.resolution) },

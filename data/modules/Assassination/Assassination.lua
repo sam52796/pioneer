@@ -24,6 +24,7 @@ local PlayerState = require 'PlayerState'
 local lc = Lang.GetResource 'core'
 local ls = Lang.GetResource 'ships'
 local l = Lang.GetResource("module-assassination")
+local lm = Lang.GetResource("module-common")
 
 -- don't produce missions for further than this many light years away
 local max_ass_dist = 30
@@ -154,17 +155,17 @@ local onChat = function (form, ref, option)
 
 		table.insert(missions,Mission.New(mission))
 
-		form:SetMessage(l.EXCELLENT)
+		form:SetMessage(lm.EXCELLENT)
 
 		return
 	elseif option == 4 then
 		form:SetMessage(l.RETURN_HERE_ON_THE_COMPLETION_OF_THE_CONTRACT_AND_YOU_WILL_BE_PAID)
 	end
 	form:AddOption(string.interp(l.WHERE_CAN_I_FIND_X), 1);
-	form:AddOption(l.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0);
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0);
 	form:AddOption(l.HOW_SOON_MUST_IT_BE_DONE, 2);
-	form:AddOption(l.HOW_WILL_I_BE_PAID, 4);
-	form:AddOption(l.OK_AGREED, 3);
+	form:AddOption(lm.HOW_WILL_I_BE_PAID, 4);
+	form:AddOption(lm.OK_AGREED, 3);
 end
 
 local placeAdvert = function(station, ad)
@@ -488,11 +489,11 @@ local function buildMissionDescription(mission)
 
 	desc.details = {
 		{ l.TARGET_NAME, mission.target.title .. " " .. mission.target.name },
-		{ l.SPACEPORT, mission.location:GetSystemBody().name },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.location) },
-		{ l.DISTANCE, dist.." "..lc.UNIT_LY },
+		{ lm.SPACEPORT, mission.location:GetSystemBody().name },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.location) },
+		{ lm.DISTANCE, dist.." "..lc.UNIT_LY },
 		false,
-		{ l.SHIP, ls[shipdef.i18n_key] },
+		{ lm.SHIP, ls[shipdef.i18n_key] },
 		{ l.SHIP_ID, mission.shipregid },
 		{ l.TARGET_WILL_BE_LEAVING_SPACEPORT_AT, ui.Format.Date(mission.due) }
 	}

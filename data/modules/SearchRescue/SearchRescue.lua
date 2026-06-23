@@ -57,6 +57,7 @@ local OutfitRules  = ShipBuilder.OutfitRules
 local l = Lang.GetResource("module-searchrescue")
 local lc = Lang.GetResource 'core'
 local ls = Lang.GetResource 'ships'
+local lm = Lang.GetResource("module-common")
 
 -- basic variables for mission creation
 local max_mission_dist = 30          -- max distance for long distance mission target location [ly]
@@ -901,9 +902,9 @@ local onChat = function (form, ref, option)
 
 	form:AddOption(l.WHERE_IS_THE_TARGET, 1)
 	form:AddOption(l.TYPE_OF_HELP, 2)
-	form:AddOption(l.HOW_MUCH_TIME, 3)
-	form:AddOption(l.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
-	form:AddOption(l.OK_AGREED, 5)
+	form:AddOption(lm.HOW_MUCH_TIME, 3)
+	form:AddOption(lm.COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST, 0)
+	form:AddOption(lm.OK_AGREED, 5)
 end
 
 local onDelete = function (ref)
@@ -2128,13 +2129,13 @@ local buildMissionDescription = function(mission)
 	desc.details = {
 		{ l.TARGET_SHIP_ID, shipname.." <"..mission.shiplabel..">" },
 		{ l.LAST_KNOWN_LOCATION, targetLocation },
-		{ l.SYSTEM, ui.Format.SystemPath(mission.system_target) },
-		{ l.DISTANCE, dist },
+		{ lm.SYSTEM, ui.Format.SystemPath(mission.system_target) },
+		{ lm.DISTANCE, dist },
 		false,
 		{ l.REWARD, ui.Format.Money(mission.reward) },
-		{ l.PAYMENT_LOCATION, paymentAddress },
-		{ l.SYSTEM, ui.Format.SystemPath(paymentLocation) },
-		{ l.DEADLINE, ui.Format.Date(mission.due) },
+		{ lm.PAYMENT_LOCATION, paymentAddress },
+		{ lm.SYSTEM, ui.Format.SystemPath(paymentLocation) },
+		{ lm.DEADLINE, ui.Format.Date(mission.due) },
 	}
 
 	local pickup_comm_text = 0

@@ -1,16 +1,4 @@
 {
-  "COULD_YOU_REPEAT_THE_ORIGINAL_REQUEST": {
-    "description": "",
-    "message": "Could you repeat the original request?"
-  },
-  "DANGER": {
-    "description": "",
-    "message": "Danger:"
-  },
-  "DEADLINE": {
-    "description": "",
-    "message": "Deadline:"
-  },
   "DELIVERY": {
     "description": "",
     "message": "Delivery"
@@ -46,10 +34,6 @@
   "DENY_7": {
     "description": "",
     "message": "I'm not willing to risk this delivery on someone without any qualifications like you."
-  },
-  "DISTANCE": {
-    "description": "",
-    "message": "Distance:"
   },
   "EXCELLENT_I_WILL_LET_THE_RECIPIENT_KNOW_YOU_ARE_ON_YOUR_WAY": {
     "description": "",
@@ -295,10 +279,6 @@
     "description": "",
     "message": "Our livelihood depends on it."
   },
-  "HOW_SOON_MUST_IT_BE_DELIVERED": {
-    "description": "",
-    "message": "How soon must it be delivered?"
-  },
   "IT_COULD_BE_DANGEROUS_YOU_SHOULD_MAKE_SURE_YOURE_ADEQUATELY_PREPARED": {
     "description": "",
     "message": "It could be dangerous, you should make sure you're adequately prepared."
@@ -314,10 +294,6 @@
   "NOT_ANY_MORE_THAN_USUAL": {
     "description": "",
     "message": "Not any more than usual."
-  },
-  "OK_AGREED": {
-    "description": "",
-    "message": "Ok, agreed."
   },
   "PIRATE_TAUNTS_0": {
     "description": "",
@@ -359,14 +335,6 @@
     "description": "",
     "message": "You'll pay for that cargo, with your life."
   },
-  "SPACEPORT": {
-    "description": "",
-    "message": "Spaceport:"
-  },
-  "SYSTEM": {
-    "description": "",
-    "message": "System:"
-  },
   "THIS_IS_A_VALUABLE_PACKAGE_YOU_SHOULD_KEEP_YOUR_EYES_OPEN": {
     "description": "",
     "message": "This is a valuable package, you should keep your eyes open."
@@ -374,13 +342,5 @@
   "THIS_IS_VERY_RISKY_YOU_WILL_ALMOST_CERTAINLY_RUN_INTO_RESISTANCE": {
     "description": "",
     "message": "This is very risky, you will almost certainly run into resistance."
-  },
-  "WHY_SO_MUCH_MONEY": {
-    "description": "",
-    "message": "Why so much money?"
-  },
-  "WILL_I_BE_IN_ANY_DANGER": {
-    "description": "",
-    "message": "Will I be in any danger?"
   }
 }

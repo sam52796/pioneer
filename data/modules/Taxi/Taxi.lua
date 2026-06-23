@@ -35,6 +35,13 @@ local num_corporations = 12
 local num_pirate_taunts = 4
 local num_deny = 8
 
+local whereAreWeMsg = function (flavourIndex)
+	if flavours[flavourIndex].single then
+		return l.WHEREAREWE_SINGLE
+	end
+	return l.WHEREAREWE_GROUP
+end
+
 local flavours = {
 	{
 		single = false,  -- flavour 0-2 are for groups
@@ -91,18 +98,35 @@ local flavours = {
 	}
 }
 
+-- Maps each flavour (FLAVOUR_0 to FLAVOUR_12) to shared outcome strings in en.json.
+local flavourOutcomes = {
+	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_GROUP" },
+	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_GROUP" },
+	{ success = "SUCCESSMSG_GROUP_PAID",     failure = "FAILUREMSG_LATE_GROUP" },
+	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_SINGLE" },
+	{ success = "SUCCESSMSG_CARRIED_ME",     failure = "FAILUREMSG_REPORT_AUTHORITY" },
+	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_TOUR_SPOILT" },
+	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_SINGLE" },
+	{ success = "SUCCESSMSG_CARRIED_SAFELY", failure = "FAILUREMSG_LATE_SINGLE" },
+	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_LATE_SINGLE" },
+	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_USELESS_LATE" },
+	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_INEXPERIENCED" },
+	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_LOSE_JOB" },
+	{ success = "SUCCESSMSG_THE_RIDE",       failure = "FAILUREMSG_NO_MONEY" },
+}
+
 -- add strings to flavours
 for i = 1,#flavours do
 	local f = flavours[i]
+	local o = flavourOutcomes[i]
 	f.adtitle    = l["FLAVOUR_" .. i-1 .. "_ADTITLE"]
 	f.adtext     = l["FLAVOUR_" .. i-1 .. "_ADTEXT"]
 	f.introtext  = l["FLAVOUR_" .. i-1 .. "_INTROTEXT"]
 	f.whysomuch  = l["FLAVOUR_" .. i-1 .. "_WHYSOMUCH"]
 	f.howmany    = l["FLAVOUR_" .. i-1 .. "_HOWMANY"]
 	f.danger     = l["FLAVOUR_" .. i-1 .. "_DANGER"]
-	f.successmsg = l["FLAVOUR_" .. i-1 .. "_SUCCESSMSG"]
-	f.failuremsg = l["FLAVOUR_" .. i-1 .. "_FAILUREMSG"]
-	f.wherearewe = l["FLAVOUR_" .. i-1 .. "_WHEREAREWE"]
+	f.successmsg = l[o.success]
+	f.failuremsg = l[o.failure]
 end
 
 local ads = {}
@@ -381,7 +405,7 @@ local onEnterSystem = function (player)
 		end
 
 		if Game.time > mission.due then
-			Comms.ImportantMessage(flavours[mission.flavour].wherearewe, mission.client.name)
+			Comms.ImportantMessage(whereAreWeMsg(mission.flavour), mission.client.name)
 		end
 	end
 end

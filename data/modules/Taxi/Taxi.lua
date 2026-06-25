@@ -100,19 +100,19 @@ local flavours = {
 
 -- Maps each flavour (FLAVOUR_0 to FLAVOUR_12) to shared outcome strings in en.json.
 local flavourOutcomes = {
-	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_GROUP" },
-	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_GROUP" },
-	{ success = "SUCCESSMSG_GROUP_PAID",     failure = "FAILUREMSG_LATE_GROUP" },
-	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_SINGLE" },
-	{ success = "SUCCESSMSG_CARRIED_ME",     failure = "FAILUREMSG_REPORT_AUTHORITY" },
-	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_TOUR_SPOILT" },
-	{ success = "SUCCESSMSG_NICE_TRIP",      failure = "FAILUREMSG_LATE_SINGLE" },
-	{ success = "SUCCESSMSG_CARRIED_SAFELY", failure = "FAILUREMSG_LATE_SINGLE" },
-	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_LATE_SINGLE" },
-	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_USELESS_LATE" },
-	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_INEXPERIENCED" },
-	{ success = "SUCCESSMSG_FAST_RIDE",      failure = "FAILUREMSG_LOSE_JOB" },
-	{ success = "SUCCESSMSG_THE_RIDE",       failure = "FAILUREMSG_NO_MONEY" },
+	{ success = "FLAVOUR_0_SUCCESSMSG",  failure = "FLAVOUR_0_FAILUREMSG" },
+	{ success = "FLAVOUR_0_SUCCESSMSG",  failure = "FLAVOUR_0_FAILUREMSG" },
+	{ success = "FLAVOUR_2_SUCCESSMSG",  failure = "FLAVOUR_0_FAILUREMSG" },
+	{ success = "FLAVOUR_0_SUCCESSMSG",  failure = "FAILUREMSG_4" },
+	{ success = "FLAVOUR_4_SUCCESSMSG",  failure = "FLAVOUR_4_FAILUREMSG" },
+	{ success = "FLAVOUR_0_SUCCESSMSG",  failure = "FLAVOUR_5_FAILUREMSG" },
+	{ success = "FLAVOUR_0_SUCCESSMSG",  failure = "FAILUREMSG_4" },
+	{ success = "FLAVOUR_7_SUCCESSMSG",  failure = "FAILUREMSG_4" },
+	{ success = "FLAVOUR_8_SUCCESSMSG",  failure = "FAILUREMSG_4" },
+	{ success = "FLAVOUR_8_SUCCESSMSG",  failure = "FAILUREMSG_5" },
+	{ success = "FLAVOUR_8_SUCCESSMSG",  failure = "FLAVOUR_10_FAILUREMSG" },
+	{ success = "FLAVOUR_8_SUCCESSMSG",  failure = "FLAVOUR_11_FAILUREMSG" },
+	{ success = "FLAVOUR_12_SUCCESSMSG", failure = "FLAVOUR_12_FAILUREMSG" },
 }
 
 -- add strings to flavours

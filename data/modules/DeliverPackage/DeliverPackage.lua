@@ -20,6 +20,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 local l = Lang.GetResource("module-deliverpackage")
 local lc = Lang.GetResource 'core'
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-deliverpackage")
 
 -- don't produce missions for further than this many light years away
 local max_delivery_dist = 30
@@ -31,7 +32,6 @@ local typical_reward_local = 25
 local min_local_dist_pay = 8
 
 local num_pirate_taunts = 10
-local num_deny = 8
 
 
 local flavours = {
@@ -145,8 +145,7 @@ local onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		local introtext = l["DENY_"..Engine.rand:Integer(1,num_deny)-1]
-		form:SetMessage(introtext)
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 

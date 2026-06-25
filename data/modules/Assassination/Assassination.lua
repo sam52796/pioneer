@@ -25,6 +25,7 @@ local lc = Lang.GetResource 'core'
 local ls = Lang.GetResource 'ships'
 local l = Lang.GetResource("module-assassination")
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-assassination")
 
 -- don't produce missions for further than this many light years away
 local max_ass_dist = 30
@@ -43,7 +44,6 @@ for i = 0,5 do
 	})
 end
 local num_titles = 25
-local num_deny = 8
 
 local ads = {}
 local missions = {}
@@ -82,8 +82,7 @@ local onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		local introtext = l["DENY_"..Engine.rand:Integer(1,num_deny)-1]
-		form:SetMessage(introtext)
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 

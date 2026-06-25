@@ -20,6 +20,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 local l = Lang.GetResource("module-cargorun")
 local lc = Lang.GetResource 'core'
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-cargorun")
 
 local PirateTemplate = MissionUtils.ShipTemplates.WeakPirate
 local EscortTemplate = MissionUtils.ShipTemplates.GenericPolice
@@ -69,6 +70,9 @@ end
 -- This function returns the number of flavours of the given string str
 -- It is assumed that the first flavour has suffix '_1'
 local getNumberOfFlavours = function (str)
+	if str == "DENY" or str == "SUCCESSMSG" or str == "FAILUREMSG" then
+		return ml:countNumbered(str)
+	end
 	local num = 1
 
 	while l:get(str .. "_" .. num) do
@@ -141,7 +145,7 @@ onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		form:SetMessage(l["DENY_" .. Engine.rand:Integer(1, getNumberOfFlavours("DENY"))])
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 
@@ -705,7 +709,7 @@ local onPlayerDocked = function (player, station)
 				if n >= 1 then
 					Comms.ImportantMessage(l["SUCCESSMSG_" .. mission.branch .. "_" .. Engine.rand:Integer(1, n)], mission.client.name)
 				else
-					Comms.ImportantMessage(l["SUCCESSMSG_" .. Engine.rand:Integer(1, getNumberOfFlavours("SUCCESSMSG"))], mission.client.name)
+					Comms.ImportantMessage(ml:pickNumbered("SUCCESSMSG"), mission.client.name)
 				end
 
 				Character.persistent.player.reputation = Character.persistent.player.reputation + reputation
@@ -720,7 +724,7 @@ local onPlayerDocked = function (player, station)
 					if n >= 1 then
 						Comms.ImportantMessage(l["FAILUREMSG_" .. mission.branch .. "_" .. Engine.rand:Integer(1, n)], mission.client.name)
 					else
-						Comms.ImportantMessage(l["FAILUREMSG_" .. Engine.rand:Integer(1, getNumberOfFlavours("FAILUREMSG"))], mission.client.name)
+						Comms.ImportantMessage(ml:pickNumbered("FAILUREMSG"), mission.client.name)
 					end
 				end
 

@@ -51,21 +51,9 @@
     "description": "",
     "message": "I'm sorry, but I don't think I could trust you with my safety."
   },
-  "DENY_1": {
-    "description": "",
-    "message": "Come back when you have some qualifications."
-  },
-  "DENY_2": {
-    "description": "",
-    "message": "I don't think you're the pilot I'm looking for."
-  },
   "DENY_3": {
     "description": "",
     "message": "You don't look like someone capable of transporting people."
-  },
-  "DENY_4": {
-    "description": "",
-    "message": "You're not the kind of pilot I'm looking for."
   },
   "DENY_5": {
     "description": "",

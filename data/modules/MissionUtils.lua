@@ -21,6 +21,7 @@ local MissionUtils = {
 }
 
 MissionUtils.ShipTemplates = require 'modules.MissionUtils.ShipTemplates'
+MissionUtils.MissionLang = require 'modules.MissionUtils.MissionLang'
 
 ---@class MissionUtils.Calculator
 ---@field New fun(): MissionUtils.Calculator

@@ -151,26 +151,6 @@
     "description": "",
     "message": "I'm sorry, but this cargo is too valuable for me to hand over to an inexperienced pilot."
   },
-  "DENY_2": {
-    "description": "",
-    "message": "I've never heard of you. I don't know you and I don't trust you."
-  },
-  "DENY_3": {
-    "description": "",
-    "message": "I'm sorry, I'm looking for an experienced pilot."
-  },
-  "DENY_4": {
-    "description": "",
-    "message": "Excuse me, but I don't think you have what it takes to get the job done."
-  },
-  "DENY_5": {
-    "description": "",
-    "message": "Don't waste my time! You are too wet behind the ears."
-  },
-  "DENY_6": {
-    "description": "",
-    "message": "Come back when you're more experienced."
-  },
   "DENY_AGAIN_1": {
     "description": "",
     "message": "Sorry, we already have a deal. However, I would be happy to do business with you again after a successful delivery."
@@ -554,14 +534,6 @@
   "SUCCESSMSG_2": {
     "description": "",
     "message": "Thanks for the timely delivery. The money was transferred."
-  },
-  "SUCCESSMSG_3": {
-    "description": "",
-    "message": "Excellent, it was a pleasure to work with you. I have paid the bill."
-  },
-  "SUCCESSMSG_4": {
-    "description": "",
-    "message": "Thanks! I will definitely recommend you. Money has been transferred."
   },
   "SUCCESSMSG_FLUFFY_1": {
     "description": "Said when receiving a shipment of Quibbles (see wikipedia Tribble)",

@@ -115,10 +115,6 @@
     "description": "",
     "message": "Sorry, I need a pilot who has more combat experience."
   },
-  "DENY_2": {
-    "description": "",
-    "message": "Excuse me sir. I need a real professional."
-  },
   "DETECTIVE": {
     "description": "Police Detective",
     "message": "Detective"
@@ -127,21 +123,17 @@
     "description": "",
     "message": "Do I need any special equipment?"
   },
-  "FAILUREMSG_1": {
+  "FAILUREMSG_10": {
     "description": "",
     "message": "Shame on you. Get out of my sight."
   },
-  "FAILUREMSG_2": {
+  "FAILUREMSG_11": {
     "description": "",
     "message": "You are too late! You have caused great losses. You will not be paid!"
   },
-  "FAILUREMSG_3": {
+  "FAILUREMSG_12": {
     "description": "",
     "message": "You're a disgrace to all pilots. I cannot pay you!"
-  },
-  "FAILUREMSG_4": {
-    "description": "",
-    "message": "You failed! I will not pay you!"
   },
   "GREETING_1": {
     "description": "",
@@ -327,21 +319,13 @@
     "description": "",
     "message": "The enemy is very well equipped and has access to the latest technology. Be careful!"
   },
-  "SUCCESSMSG_1": {
+  "SUCCESSMSG_10": {
     "description": "",
     "message": "I knew you were the right person for such a mission. Here is your payment."
   },
-  "SUCCESSMSG_2": {
-    "description": "",
-    "message": "Thank you for making it. I have transferred the money."
-  },
-  "SUCCESSMSG_3": {
+  "SUCCESSMSG_11": {
     "description": "",
     "message": "I hope you had no big trouble. I just paid you."
-  },
-  "SUCCESSMSG_4": {
-    "description": "",
-    "message": "Very well done. I have paid the bill."
   },
   "TARGET_AREA_REACHED": {
     "description": "",

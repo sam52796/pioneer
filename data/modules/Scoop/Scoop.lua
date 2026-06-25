@@ -27,6 +27,7 @@ local utils = require 'utils'
 local l = Lang.GetResource("module-scoop")
 local lc = Lang.GetResource("ui-core")
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-scoop")
 
 local AU = 149597870700.0
 local LEGAL = 1
@@ -174,6 +175,9 @@ end
 
 -- Returns the number of flavours of the given string (assuming first flavour has suffix '_1').
 local getNumberOfFlavours = function (str)
+	if str == "DENY" then
+		return ml:countNumbered(str)
+	end
 	local num = 1
 
 	while l:get(str .. "_" .. num) do
@@ -384,7 +388,7 @@ local onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		form:SetMessage(l["DENY_" .. Engine.rand:Integer(1, getNumberOfFlavours("DENY"))])
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 

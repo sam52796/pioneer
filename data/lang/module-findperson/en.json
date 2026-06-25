@@ -75,18 +75,6 @@
     "description": "Name of a company",
     "message": "{name} Special IT Services Foundation"
   },
-  "DENY_1": {
-    "description": "",
-    "message": "Excuse me Sir, but I need a pilot who has more experience."
-  },
-  "FAILUREMSG_1": {
-    "description": "",
-    "message": "I'm not satisfied with your performance. I won't pay you!"
-  },
-  "FAILUREMSG_2": {
-    "description": "",
-    "message": "You are too late! Sorry, you won't get paid!"
-  },
   "FIND_PERSON": {
     "description": "Name of mission type",
     "message": "Find person"
@@ -443,23 +431,15 @@
     "description": "",
     "message": "I just paid you. I heard you had a mercenary on your neck. Great job!"
   },
-  "SUCCESS_MSG_1": {
+  "SUCCESSMSG_10": {
     "description": "",
     "message": "Thank you for this service. I have paid the fee."
   },
-  "SUCCESS_MSG_2": {
+  "SUCCESSMSG_11": {
     "description": "",
     "message": "Thanks for the service. Your salary has been transferred."
   },
-  "SUCCESS_MSG_3": {
-    "description": "",
-    "message": "Good job! I have transferred the money."
-  },
-  "SUCCESS_MSG_4": {
-    "description": "",
-    "message": "Thank you very much! I've paid you in full."
-  },
-  "SUCCESS_MSG_5": {
+  "SUCCESSMSG_13": {
     "description": "",
     "message": "You found {wanted}? Great! Here's your payment."
   },

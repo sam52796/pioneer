@@ -47,10 +47,6 @@
     "description": "",
     "message": "HELP NEEDED"
   },
-  "DENY_1": {
-    "description": "",
-    "message": "Excuse me, sir? I don't think your current qualification is sufficient."
-  },
   "DENY_2": {
     "description": "",
     "message": "Sorry, I think this task is beyond your ability as a pilot."

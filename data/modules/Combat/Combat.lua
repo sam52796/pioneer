@@ -22,6 +22,7 @@ local ShipBuilder = require 'modules.MissionUtils.ShipBuilder'
 local l = Lang.GetResource("module-combat")
 local lc = Lang.GetResource 'core'
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-combat")
 
 -- typical reward for a mission to a system 1ly away
 local typical_reward = 100
@@ -73,6 +74,9 @@ end
 
 -- Returns the number of flavours of the given string (assuming first flavour has suffix '_1').
 local getNumberOfFlavours = function (str)
+	if str == "DENY" or str == "SUCCESSMSG" or str == "FAILUREMSG" then
+		return ml:countNumbered(str)
+	end
 	local num = 1
 
 	while l:get(str .. "_" .. num) do
@@ -96,7 +100,7 @@ local onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		form:SetMessage(l["DENY_" .. Engine.rand:Integer(1, getNumberOfFlavours("DENY"))])
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 
@@ -416,10 +420,10 @@ end
 local finishMission = function (ref, mission)
 	local delta_reputation = 0
 	if Game.time > mission.due then
-		Comms.ImportantMessage(l["FAILUREMSG_" .. Engine.rand:Integer(1, getNumberOfFlavours("FAILUREMSG"))], mission.client.name)
+		Comms.ImportantMessage(ml:pickNumbered("FAILUREMSG"), mission.client.name)
 		delta_reputation = -2.5
 	elseif mission.complete then
-		Comms.ImportantMessage(l["SUCCESSMSG_" .. Engine.rand:Integer(1, getNumberOfFlavours("SUCCESSMSG"))], mission.client.name)
+		Comms.ImportantMessage(ml:pickNumbered("SUCCESSMSG"), mission.client.name)
 		delta_reputation = 2.5
 		PlayerState.AddMoney(mission.reward)
 		if mission.bonus > 0 then

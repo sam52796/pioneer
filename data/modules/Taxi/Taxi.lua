@@ -23,6 +23,7 @@ local PirateTemplate = MissionUtils.ShipTemplates.GenericPirate
 local l = Lang.GetResource("module-taxi")
 local lc = Lang.GetResource 'core'
 local lm = Lang.GetResource("module-common")
+local ml = MissionUtils.MissionLang.New("module-taxi")
 
 -- don't produce missions for further than this many light years away
 local max_taxi_dist = 40
@@ -33,7 +34,6 @@ local max_group = 10
 
 local num_corporations = 12
 local num_pirate_taunts = 4
-local num_deny = 8
 
 local whereAreWeMsg = function (flavourIndex)
 	if flavours[flavourIndex].single then
@@ -125,8 +125,8 @@ for i = 1,#flavours do
 	f.whysomuch  = l["FLAVOUR_" .. i-1 .. "_WHYSOMUCH"]
 	f.howmany    = l["FLAVOUR_" .. i-1 .. "_HOWMANY"]
 	f.danger     = l["FLAVOUR_" .. i-1 .. "_DANGER"]
-	f.successmsg = l[o.success]
-	f.failuremsg = l[o.failure]
+	f.successmsg = ml:get(o.success)
+	f.failuremsg = ml:get(o.failure)
 end
 
 local ads = {}
@@ -170,8 +170,7 @@ local onChat = function (form, ref, option)
 	form:SetFace(ad.client)
 
 	if not qualified then
-		local introtext = l["DENY_"..Engine.rand:Integer(1,num_deny)-1]
-		form:SetMessage(introtext)
+		form:SetMessage(ml:pickNumbered("DENY"))
 		return
 	end
 

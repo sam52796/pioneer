@@ -7,6 +7,58 @@
     "description": "Comms dialog option",
     "message": "Could you repeat the original request?"
   },
+  "DENY_1": {
+    "description": "Reputation too low",
+    "message": "Come back when you have some qualifications."
+  },
+  "DENY_2": {
+    "description": "Reputation too low",
+    "message": "I don't think you're the pilot I'm looking for."
+  },
+  "DENY_3": {
+    "description": "Reputation too low",
+    "message": "You're not the kind of pilot I'm looking for."
+  },
+  "DENY_4": {
+    "description": "Reputation too low",
+    "message": "You don't look like someone capable of handling this job."
+  },
+  "DENY_5": {
+    "description": "Reputation too low",
+    "message": "You seem much too inexperienced to handle a task of this importance."
+  },
+  "DENY_6": {
+    "description": "Reputation too low",
+    "message": "I have never heard of you. I need someone experienced for this job."
+  },
+  "DENY_7": {
+    "description": "Reputation too low",
+    "message": "I'm not willing to risk this job on someone without any qualifications like you."
+  },
+  "DENY_8": {
+    "description": "Reputation too low",
+    "message": "I'm sorry, I'm looking for an experienced pilot."
+  },
+  "DENY_9": {
+    "description": "Reputation too low",
+    "message": "I don't think so, I need a real professional."
+  },
+  "DENY_10": {
+    "description": "Reputation too low",
+    "message": "Excuse me, I don't think your current qualifications are sufficient."
+  },
+  "DENY_11": {
+    "description": "Reputation too low",
+    "message": "I've never heard of you. I don't know you and I don't trust you."
+  },
+  "DENY_12": {
+    "description": "Reputation too low",
+    "message": "Excuse me, but I don't think you have what it takes to get the job done."
+  },
+  "DENY_13": {
+    "description": "Reputation too low",
+    "message": "Don't waste my time! You are too wet behind the ears."
+  },
   "DANGER": {
     "description": "Mission detail: the risk level",
     "message": "Danger:"
@@ -22,6 +74,26 @@
   "EXCELLENT": {
     "description": "Comms dialog response",
     "message": "Excellent."
+  },
+  "FAILUREMSG_1": {
+    "description": "Mission failed; too late",
+    "message": "You are too late! Sorry, you won't get paid!"
+  },
+  "FAILUREMSG_2": {
+    "description": "Mission failed; will not pay",
+    "message": "You failed! I will not pay you!"
+  },
+  "FAILUREMSG_3": {
+    "description": "Mission failed; unsatisfied with performance",
+    "message": "I'm not satisfied with your performance. I won't pay you!"
+  },
+  "FAILUREMSG_4": {
+    "description": "Mission failed; late arrival",
+    "message": "Unacceptable! You took forever. I'm not willing to pay you."
+  },
+  "FAILUREMSG_5": {
+    "description": "Mission failed; late arrival",
+    "message": "Useless! You took forever. I'm not willing to pay you."
   },
   "HOW_MUCH_TIME": {
     "description": "Comms dialog option",
@@ -50,6 +122,18 @@
   "SPACEPORT": {
     "description": "Mission detail: spaceport name",
     "message": "Spaceport:"
+  },
+  "SUCCESSMSG_1": {
+    "description": "Mission completed; bill paid",
+    "message": "Very well done. I have paid the bill."
+  },
+  "SUCCESSMSG_2": {
+    "description": "Mission completed; paid in full",
+    "message": "Thank you very much! I've paid you in full."
+  },
+  "SUCCESSMSG_3": {
+    "description": "Mission completed; payment transferred",
+    "message": "Good job! I have transferred the money."
   },
   "SYSTEM": {
     "description": "Mission detail: star system",
